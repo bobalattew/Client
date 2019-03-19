@@ -14,7 +14,7 @@ int main(){
      struct sockaddr_in server_address;
      server_address.sin_family=AF_INET;
      server_address.sin_port=htons(9002);
-     sever_address.sin_addr.s_addr=inet_addr("10.0.2.15");
+     server_address.sin_addr.s_addr=inet_addr("10.0.2.15");
      
      int stat=connect(network_socket,(struct sockaddr*) &server_address,sizeof(server_address));
      
