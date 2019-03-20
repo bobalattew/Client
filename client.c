@@ -25,12 +25,11 @@ int main(){
      } 
        
      char server_response[256];
-     
-     send(network_socket, hello, strlen(hello), 0 );
-     
      recv(network_socket, &server_response, sizeof(server_response),0);
      
      printf("Server said: %s", server_response);
+     
+     send(network_socket, hello, strlen(hello), 0 );
      
      close(network_socket);
      
