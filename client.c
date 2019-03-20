@@ -29,7 +29,7 @@ int main(){
      
      recv(network_socket, &server_response, sizeof(server_response),0);
      
-     printf("yeay,%s", server_response);
+     printf("Server said: %s", server_response);
      
      close(network_socket);
      
