@@ -8,6 +8,7 @@
 
 int main(){
 
+     char *hello="hello";
      int network_socket;
      network_socket=socket(AF_INET, SOCK_STREAM, 0);
      
@@ -23,6 +24,8 @@ int main(){
      } 
        
      char server_response[256];
+     
+     send(network_socket, hello, strlen(hello), 0 );
      
      recv(network_socket, &server_response, sizeof(server_response),0);
      
