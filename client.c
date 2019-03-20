@@ -29,8 +29,6 @@ int main(){
      
      printf("Server said: %s", server_response);
      
-     send(network_socket, hello, strlen(hello), 0 );
-     
      close(network_socket);
      
      return 0;
